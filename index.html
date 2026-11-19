@@ -259,7 +259,7 @@
     const items=document.createElement('div');items.className='blud-items';
     matches.forEach(x=>{
      const row=document.createElement('div');row.className='blud-item';
-     const num=document.createElement('span');num.className='blud-num';num.textContent=String(aspect.numbers?.[x.i] ?? (x.i+1)).padStart(2,'0');
+     const num=document.createElement('span');num.className='blud-num';const number=String(aspect.numbers?.[x.i] ?? (x.i+1));num.textContent=/^\\d+$/.test(number)?number.padStart(2,'0'):number;
      const txt=document.createElement('span');txt.className='blud-item-text';txt.textContent=x.item;
      const pending=document.createElement('span');pending.className='blud-pending';pending.textContent='LINK BELUM DIPASANG';
      row.append(num,txt,pending);items.appendChild(row);
