@@ -267,7 +267,7 @@
     if(q&&!matches.length)return;
     groupHas=true;
     const a=document.createElement('details');a.className='blud-aspect';a.open=!!q;
-    const as=document.createElement('summary');as.textContent=aspect.title.replace(/^[A-F]\\.\\s*/,'')+' ('+aspect.items.length+' indikator)';
+    const as=document.createElement('summary');as.textContent=aspect.title.replace(/^[A-F]\.\s*/,'')+' ('+aspect.items.length+' indikator)';
 a.classList.toggle('is-susulan',/susulan/i.test(aspect.title));a.appendChild(as);
     const items=document.createElement('div');items.className='blud-items';
     matches.forEach(x=>{
