@@ -228,6 +228,17 @@
    {title:'F. SUSULAN',items:['Susulan']}
   ]}
  ];
+ data[0].aspects[0].numbers=[1,2,3,4,5,6,7,8,9,10,11,12];
+ data[0].aspects[1].numbers=[13,14,15,16,17,18,19];
+ data[1].aspects[0].numbers=[1,2,3,4,5,6,7,8,9,10,11,12];
+ data[1].aspects[1].numbers=[15,16,17];
+ data[1].aspects[2].numbers=['S'];
+ data[2].aspects[0].numbers=[1,2,3,4,5];
+ data[2].aspects[1].numbers=[5,6,7,'7a','7b'];
+ data[2].aspects[2].numbers=[8,9,10];
+ data[2].aspects[3].numbers=[11,12];
+ data[2].aspects[4].numbers=[13,14];
+ data[2].aspects[5].numbers=['S'];
  const list=document.getElementById('bludMenuList');
  function render(filter){
   const q=(filter||'').toLocaleLowerCase('id');
@@ -248,7 +259,7 @@
     const items=document.createElement('div');items.className='blud-items';
     matches.forEach(x=>{
      const row=document.createElement('div');row.className='blud-item';
-     const num=document.createElement('span');num.className='blud-num';num.textContent=String(x.i+1).padStart(2,'0');
+     const num=document.createElement('span');num.className='blud-num';num.textContent=String(aspect.numbers?.[x.i] ?? (x.i+1)).padStart(2,'0');
      const txt=document.createElement('span');txt.className='blud-item-text';txt.textContent=x.item;
      const pending=document.createElement('span');pending.className='blud-pending';pending.textContent='LINK BELUM DIPASANG';
      row.append(num,txt,pending);items.appendChild(row);
