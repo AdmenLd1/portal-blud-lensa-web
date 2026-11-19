@@ -8,7 +8,7 @@
   <title>PORTAL DOKUMEN PENILAIAN BLUD LENSA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#080F1E;--bg2:#0B1528;--panel:#101D33;--panel2:#142440;
@@ -17,7 +17,7 @@
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;scroll-padding-top:28px}
-    body{margin:0;background:var(--bg);color:var(--white);font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:'Poppins',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
     a{color:inherit}
     .ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;background:radial-gradient(ellipse at 78% 12%,rgba(37,99,235,.16),transparent 34%),radial-gradient(ellipse at 12% 62%,rgba(14,116,190,.10),transparent 30%)}
     .ambient:after{content:"";position:absolute;inset:0;opacity:.14;background-image:linear-gradient(rgba(148,177,219,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(148,177,219,.12) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,black,transparent 75%)}
@@ -25,7 +25,7 @@
     .site-header{height:82px;padding:0 max(24px,calc((100vw - var(--max))/2));display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(8,15,30,.78);backdrop-filter:blur(18px)}
     .brand{display:flex;align-items:center;gap:13px;text-decoration:none;min-width:0}
     .brand img{width:45px;height:45px;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(52,120,246,.18))}
-    .brand-name{font:700 17px 'Space Grotesk',sans-serif;letter-spacing:.08em;color:#fff;line-height:1.2}
+    .brand-name{font:700 17px 'Poppins',sans-serif;letter-spacing:.08em;color:#fff;line-height:1.2}
     .brand-sub{font-size:10px;letter-spacing:.17em;color:#91A5C2;font-weight:700;margin-top:4px}
     .header-label{display:flex;align-items:center;gap:9px;color:#AFC1DA;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
     .status-dot{width:8px;height:8px;border-radius:50%;background:#53B7FF;box-shadow:0 0 13px #348BFF}
@@ -35,7 +35,7 @@
     .hero-inner{width:min(var(--max),100%);margin:0 auto;padding:96px 28px 108px}
     .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border:1px solid rgba(119,177,255,.34);border-radius:999px;background:rgba(15,37,72,.58);color:#B9D9FF;font-size:11px;font-weight:800;letter-spacing:.16em}
     .eyebrow-mark{width:7px;height:7px;border-radius:2px;background:#60A5FA;box-shadow:0 0 12px #60A5FA;transform:rotate(45deg)}
-    h1{max-width:850px;margin:28px 0 20px;font:700 clamp(42px,6.4vw,76px)/1.08 'Space Grotesk',sans-serif;letter-spacing:-.065em;text-wrap:balance;color:#F7FAFF}
+    h1{max-width:850px;margin:28px 0 20px;font:700 clamp(42px,6.4vw,76px)/1.08 'Poppins',sans-serif;letter-spacing:-.065em;text-wrap:balance;color:#F7FAFF}
     h1 .accent{color:#70B7FF;text-shadow:0 0 35px rgba(52,120,246,.22)}
     .hero-description{max-width:650px;margin:0;color:#C0CCDE;font-size:clamp(16px,1.45vw,19px);line-height:1.85}
     .hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:36px}
@@ -48,9 +48,9 @@
     .archive-top{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:34px}
     .section-kicker{display:flex;align-items:center;gap:10px;color:#70B7FF;font-size:12px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
     .section-kicker:before{content:"";width:25px;height:2px;background:#3478F6;box-shadow:0 0 12px rgba(52,120,246,.8)}
-    h2{margin:13px 0 8px;font:700 clamp(32px,4vw,46px)/1.15 'Space Grotesk',sans-serif;letter-spacing:-.05em;color:#F4F7FC}
+    h2{margin:13px 0 8px;font:700 clamp(32px,4vw,46px)/1.15 'Poppins',sans-serif;letter-spacing:-.05em;color:#F4F7FC}
     .section-description{margin:0;color:var(--muted);font-size:16px;line-height:1.75;max-width:590px}
-    .archive-index{flex:0 0 auto;color:#7F93B1;font:600 12px 'Space Grotesk',sans-serif;letter-spacing:.13em;padding-bottom:8px}
+    .archive-index{flex:0 0 auto;color:#7F93B1;font:600 12px 'Poppins',sans-serif;letter-spacing:.13em;padding-bottom:8px}
     .archive-index strong{font-size:28px;color:#E8F1FF;letter-spacing:-.04em;margin-right:5px}
     .document-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
     .document-card{--accent:#3478F6;min-height:260px;position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;padding:25px 23px 22px;border:1px solid rgba(129,166,220,.19);border-radius:17px;background:linear-gradient(155deg,rgba(21,39,68,.94),rgba(13,25,45,.98));text-decoration:none;color:var(--white);box-shadow:0 12px 35px rgba(0,0,0,.16);transition:transform .25s,border-color .25s,box-shadow .25s,background .25s}
@@ -61,8 +61,8 @@
     .card-top{display:flex;align-items:center;justify-content:space-between}
     .doc-icon{width:48px;height:48px;display:grid;place-items:center;border:1px solid rgba(96,165,250,.24);border-radius:13px;background:rgba(52,120,246,.12);color:#78B9FF}
     .doc-icon svg{width:24px;height:24px}
-    .card-number{font:600 12px 'Space Grotesk',sans-serif;letter-spacing:.12em;color:#7186A5}
-    .doc-year{margin-top:27px;font:700 clamp(34px,3.2vw,43px)/1 'Space Grotesk',sans-serif;letter-spacing:-.06em;color:#F5F8FF}
+    .card-number{font:600 12px 'Poppins',sans-serif;letter-spacing:.12em;color:#7186A5}
+    .doc-year{margin-top:27px;font:700 clamp(34px,3.2vw,43px)/1 'Poppins',sans-serif;letter-spacing:-.06em;color:#F5F8FF}
     .doc-title{margin-top:9px;color:#AFC0D8;font-size:14px;line-height:1.6;font-weight:500}
     .doc-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:23px;color:#7EBBFF;font-size:13px;font-weight:800}
     .doc-arrow{width:35px;height:35px;display:grid;place-items:center;border-radius:50%;background:#2563EB;color:#fff;transition:transform .22s,background .22s}
@@ -71,7 +71,7 @@
     .notice svg{width:20px;height:20px;flex:0 0 20px;margin-top:2px;color:#70B7FF}
     .notice strong{color:#E5F0FF}
     .site-footer{padding:27px 24px 30px;border-top:1px solid var(--line);background:rgba(5,11,22,.7);text-align:center;color:#8092AD;font-size:13px;line-height:1.8}
-    .site-footer strong{display:block;margin-bottom:4px;color:#E6EFFB;font:700 14px 'Space Grotesk',sans-serif;letter-spacing:.12em}
+    .site-footer strong{display:block;margin-bottom:4px;color:#E6EFFB;font:700 14px 'Poppins',sans-serif;letter-spacing:.12em}
     .footer-meta{color:#60738F;font-size:11px;letter-spacing:.08em}
     @media(max-width:1000px){.document-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{min-height:550px}.archive{padding:78px 0 84px}}
     @media(max-width:640px){.site-header{height:72px;padding:0 19px}.brand img{width:40px;height:40px}.brand-name{font-size:15px}.brand-sub{font-size:9px}.header-label{font-size:10px;letter-spacing:.08em}.hero{min-height:570px;background-position:58% center}.hero-inner{padding:76px 23px 82px}.eyebrow{font-size:10px;letter-spacing:.12em}h1{font-size:clamp(39px,11vw,54px);margin-top:24px}.hero-description{font-size:16px;line-height:1.75}.hero-actions{margin-top:29px;gap:13px}.primary-link{width:100%;min-height:55px}.hero-note{font-size:12px}.archive{width:calc(100% - 38px);padding:68px 0 72px}.archive-top{display:block;margin-bottom:25px}h2{font-size:34px}.section-description{font-size:15px}.archive-index{margin-top:18px}.document-grid{grid-template-columns:1fr;gap:13px}.document-card{min-height:205px;padding:21px}.doc-year{font-size:39px;margin-top:21px}.doc-title{font-size:14px}.doc-bottom{padding-top:18px}.notice{font-size:13px;padding:15px}.site-footer{font-size:12px}}
@@ -159,11 +159,11 @@
 .blud-head{padding:28px clamp(18px,5vw,72px);background:linear-gradient(115deg,#e4f1ff,#f2f7ff 58%,#e7f7f4);border-bottom:1px solid #d8e5f3}
 .blud-headrow{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1440px;margin:0 auto}
 .blud-kicker{font-size:11px;letter-spacing:.16em;color:#2872bd;font-weight:800}
-.blud-head h2{font:700 clamp(25px,4vw,36px) 'Space Grotesk',sans-serif;margin:8px 0 4px;color:#183657}
+.blud-head h2{font:700 clamp(25px,4vw,36px) 'Poppins',sans-serif;margin:8px 0 4px;color:#183657}
 .blud-head p{color:#60748d;margin:0;font-size:14px}
 .blud-close{border:1px solid #c8d8e9;background:#fff;color:#29496d;border-radius:12px;padding:10px 14px;font:700 13px inherit;cursor:pointer;box-shadow:0 2px 8px rgba(35,72,115,.06)}
 .blud-body{padding:28px clamp(18px,5vw,72px) 48px;max-width:1440px;margin:0 auto}
-.blud-search{width:100%;background:#fff;border:1px solid #d5e1ef;border-radius:13px;padding:15px 17px;color:#233b59;font:500 14px 'Plus Jakarta Sans',sans-serif;outline:none;margin-bottom:18px;box-shadow:0 3px 12px rgba(42,76,116,.04)}
+.blud-search{width:100%;background:#fff;border:1px solid #d5e1ef;border-radius:13px;padding:15px 17px;color:#233b59;font:500 14px 'Poppins',sans-serif;outline:none;margin-bottom:18px;box-shadow:0 3px 12px rgba(42,76,116,.04)}
 .blud-search::placeholder{color:#8a9bb0}
 .blud-search:focus{border-color:#5b9de5;box-shadow:0 0 0 3px rgba(52,120,246,.12)}
 .blud-group{border:1px solid #d8e4f1;border-radius:16px;margin:13px 0;overflow:hidden;background:#fff;box-shadow:0 4px 15px rgba(37,70,110,.045)}
