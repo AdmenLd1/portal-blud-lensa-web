@@ -124,7 +124,7 @@
 <div class="doc-year">2025</div><div class="doc-title">PENILAIAN BLUD TAHUN 2025</div>
 <div class="doc-bottom"><span>BUKA FOLDER DOKUMEN</span><span class="doc-arrow">↗</span></div>
 </a>
-<a class="document-card" href="https://drive.google.com/drive/folders/13DiacdCU_XprjJ_HZ7Zp-WL-vc6k9CvV" target="_blank" rel="noopener noreferrer">
+<a class="document-card" href="#blud2026" id="openBlud2026">
 <div class="card-top"><span class="card-number">DATA / 04</span></div>
 <div class="doc-year">2026</div><div class="doc-title">PENILAIAN BLUD TAHUN 2026</div>
 <div class="doc-bottom"><span>BUKA FOLDER DOKUMEN</span><span class="doc-arrow">↗</span></div>
@@ -151,5 +151,123 @@
       });
     });
   </script>
+
+<style>
+#blud2026Panel{position:fixed;inset:0;z-index:1000;display:none;overflow-y:auto;background:rgba(5,10,22,.88);backdrop-filter:blur(14px);padding:24px}
+#blud2026Panel.is-open{display:block}
+.blud-shell{max-width:1000px;margin:24px auto;background:#0d192d;border:1px solid rgba(148,177,219,.2);border-radius:24px;box-shadow:0 24px 80px rgba(0,0,0,.45);overflow:hidden;color:#f4f7fc}
+.blud-head{padding:26px 30px;background:linear-gradient(120deg,#10294c,#0d192d);border-bottom:1px solid rgba(148,177,219,.17)}
+.blud-headrow{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.blud-kicker{font-size:11px;letter-spacing:.16em;color:#8fbaff;font-weight:800}
+.blud-head h2{font:700 clamp(25px,4vw,36px) 'Space Grotesk',sans-serif;margin:8px 0 4px;color:#fff}
+.blud-head p{color:#a7b5ca;margin:0;font-size:14px}
+.blud-close{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);color:#fff;border-radius:12px;padding:10px 14px;font:700 13px inherit;cursor:pointer}
+.blud-body{padding:24px 30px 30px}
+.blud-search{width:100%;background:#101f36;border:1px solid rgba(148,177,219,.22);border-radius:12px;padding:14px 16px;color:#fff;font:500 14px 'Plus Jakarta Sans',sans-serif;outline:none;margin-bottom:18px}
+.blud-search:focus{border-color:#60a5fa;box-shadow:0 0 0 3px rgba(52,120,246,.15)}
+.blud-group{border:1px solid rgba(148,177,219,.18);border-radius:16px;margin:12px 0;overflow:hidden;background:#111f35}
+.blud-group>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:18px 20px;font-weight:800;color:#f4f7fc}
+.blud-group>summary::-webkit-details-marker{display:none}
+.blud-group>summary:after{content:'+';margin-left:auto;color:#8fbaff;font-size:23px;font-weight:400}
+.blud-group[open]>summary:after{content:'−'}
+.blud-group-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:rgba(52,120,246,.16);color:#8fc0ff;font-size:19px}
+.blud-aspects{padding:0 14px 14px}
+.blud-aspect{border:1px solid rgba(148,177,219,.14);border-radius:12px;margin:9px 0;background:#0c192c;overflow:hidden}
+.blud-aspect>summary{list-style:none;cursor:pointer;padding:13px 15px;display:flex;gap:10px;align-items:center;color:#dce8f8;font-size:13px;font-weight:800}
+.blud-aspect>summary::-webkit-details-marker{display:none}
+.blud-aspect>summary:after{content:'⌄';margin-left:auto;color:#8fbaff;font-size:18px}
+.blud-aspect[open]>summary:after{content:'⌃'}
+.blud-items{padding:0 12px 12px}
+.blud-item{display:flex;align-items:flex-start;gap:11px;padding:10px 9px;border-top:1px solid rgba(148,177,219,.1);font-size:13px;color:#cbd8e9}
+.blud-num{flex:0 0 25px;color:#78aefb;font:700 12px 'Space Grotesk',sans-serif;padding-top:2px}
+.blud-item-text{flex:1}
+.blud-item-note{display:block;color:#91a5c2;font-size:11px;margin-top:3px}
+.blud-pending{font-size:10px;color:#9fb0c8;border:1px solid rgba(148,177,219,.2);border-radius:20px;padding:3px 7px;white-space:nowrap}
+.blud-footnote{font-size:12px;color:#9fb0c8;padding:14px 4px 0;line-height:1.7}
+.blud-hidden{display:none!important}
+@media(max-width:640px){#blud2026Panel{padding:10px}.blud-shell{margin:4px auto;border-radius:18px}.blud-head{padding:20px}.blud-body{padding:16px}.blud-headrow{align-items:flex-start}.blud-close{padding:8px 10px}.blud-group>summary{padding:14px}.blud-pending{font-size:9px}}
+</style>
+<div id="blud2026Panel" role="dialog" aria-modal="true" aria-labelledby="blud2026Title">
+ <div class="blud-shell">
+  <div class="blud-head">
+   <div class="blud-headrow">
+    <div><div class="blud-kicker">PORTAL DOKUMEN PENILAIAN BLUD</div><h2 id="blud2026Title">Penilaian BLUD 2026</h2><p>Pilih kelompok dan aspek untuk melihat daftar indikator.</p></div>
+    <button class="blud-close" id="closeBlud2026" type="button">✕ Tutup</button>
+   </div>
+  </div>
+  <div class="blud-body">
+   <input class="blud-search" id="bludSearch" type="search" placeholder="Cari indikator, misalnya: Rasio Lancar, SKM, atau SOP..." aria-label="Cari indikator penilaian">
+   <div id="bludMenuList"></div>
+   <div class="blud-footnote">Daftar indikator mengikuti struktur yang diberikan. Tautan ke folder khusus tiap indikator belum dipasang; setelah ID/link folder Google Drive tersedia, setiap indikator dapat dihubungkan ke dokumen masing-masing.</div>
+  </div>
+ </div>
+</div>
+<script>
+(function(){
+ const data=[
+  {title:'KEUANGAN',icon:'▤',aspects:[
+   {title:'A. KEPATUHAN PENGELOLAAN KEUANGAN',items:[
+    'Rencana Bisnis dan Anggaran','Kelengkapan Komponen Laporan Keuangan','Akurasi Sistem Informasi Keuangan','Laporan Operasional','Laporan Kinerja','Audit/Pemeriksaan Eksternal','Ketepatan Waktu Pelaporan','Dokumen Surat Permintaan Pengesahan Belanja, SP3B, BAP Kas','Berita Acara Rekonsiliasi antara Dinas Kesehatan dan Puskesmas','Berita Acara Rekonsiliasi antara Bank dan Puskesmas','Hasil Pemeriksaan','Dokumen SOP']},
+   {title:'B. RASIO KEUANGAN',items:['Rasio Lancar','Rasio Cepat','Rasio Kas','Total Debt to Equity Ratio','Total Debt to Aset Ratio','Rasio Efisiensi','Kemandirian Usaha']}
+  ]},
+  {title:'PELAYANAN',icon:'♡',aspects:[
+   {title:'A. STANDAR PELAYANAN MINIMAL BIDANG KESEHATAN',items:[
+    'Cakupan Pelayanan Kesehatan Ibu Hamil','Cakupan Pelayanan Kesehatan Ibu Bersalin','Cakupan Pelayanan Kesehatan Bayi Baru Lahir','Cakupan Pelayanan Kesehatan Balita','Cakupan Pelayanan Kesehatan pada Usia Pendidikan Dasar','Cakupan Pelayanan Pendidikan pada Usia Produktif','Cakupan Pelayanan Kesehatan pada Usia Lanjut','Cakupan Pelayanan Kesehatan Hipertensi','Cakupan Pelayanan Kesehatan Penderita DM','Cakupan Pelayanan Kesehatan Penderita Gangguan Jiwa Berat','Cakupan Pelayanan Orang Terduga TB','Cakupan Pelayanan Kesehatan Orang dengan Resiko Terinfeksi HIV']},
+   {title:'B. MUTU PELAYANAN KESEHATAN DI PUSKESMAS',items:[
+    'Pelayanan Gawat Darurat Perawat yang Memiliki Sertifikat PPGD','Pelayanan Kefarmasian — pelayanan farmasi sesuai standar','Pelayanan Laboratorium']},
+   {title:'C. SUSULAN ASPEK PELAYANAN',items:['Susulan aspek pelayanan']}
+  ]},
+  {title:'MANFAAT',icon:'◎',aspects:[
+   {title:'A. PENANGANAN ADUAN',items:[
+    'Adanya tim penanganan keluhan dan masukan dari pelanggan/masyarakat dan mekanismenya','Pencatatan data keluhan dan masukan pelanggan','Data keluhan yang tertangani sesuai kewenangan','Adanya sarana prasarana komunikasi dalam pengelolaan keluhan dan masukan (dari menerima sampai feedback, tindaklanjut kepemberi keluhan dan masukan)','Susulan']},
+   {title:'B. KEMUDAHAN PELAYANAN',items:[
+    'Adanya alur pelayanan, denah ruang pelayanan/papan nama pelayanan, syarat layanan, waktu/jadwal pelayanan, sarana disabilitas','Adanya standar pelayanan yang ditetapkan oleh pejabat yang berwenang','Adanya inovasi (ada KAK) untuk mempermudah/mempercepat pelayanan, pernah/belum pernah mendapat penghargaan','MASDARMANTIK — inovasi pelayanan','WASIAM — inovasi pelayanan']},
+   {title:'C. TRANSPARANSI',items:['Adanya Maklumat Pelayanan','Hak dan Kewajiban Pasien/Pengguna Layanan','Kejelasan Petugas (Name tag, Papan Nama)']},
+   {title:'D. PARTISIPASI MASYARAKAT',items:['Lokakarya Mini (Lintas Sektoral) Dokumen Lokmin (undangan, daftar hadir, notulen, dokumen kegiatan)','Adanya Survey Kepuasan Masyarakat (SKM)']},
+   {title:'E. KONDISI LINGKUNGAN',items:['Pengelolaan Bahan Berbahaya dan Beracun (B3) dan limbahnya','Implementasi 5R (Ringkas, Rapi, Resik, Rawat, Rajin)']},
+   {title:'F. SUSULAN',items:['Susulan']}
+  ]}
+ ];
+ const list=document.getElementById('bludMenuList');
+ function render(filter){
+  const q=(filter||'').toLocaleLowerCase('id');
+  list.innerHTML='';
+  data.forEach((group,gi)=>{
+   const details=document.createElement('details');details.className='blud-group';details.open=!!q;
+   const summary=document.createElement('summary');
+   summary.innerHTML='<span class="blud-group-icon">'+group.icon+'</span><span>'+group.title+'</span>';
+   details.appendChild(summary);
+   const wrap=document.createElement('div');wrap.className='blud-aspects';
+   let groupHas=false;
+   group.aspects.forEach((aspect,ai)=>{
+    const matches=aspect.items.map((item,i)=>({item,i})).filter(x=>!q||(x.item+' '+aspect.title+' '+group.title).toLocaleLowerCase('id').includes(q));
+    if(q&&!matches.length)return;
+    groupHas=true;
+    const a=document.createElement('details');a.className='blud-aspect';a.open=!!q;
+    const as=document.createElement('summary');as.textContent=aspect.title+' ('+aspect.items.length+' indikator)';a.appendChild(as);
+    const items=document.createElement('div');items.className='blud-items';
+    matches.forEach(x=>{
+     const row=document.createElement('div');row.className='blud-item';
+     const num=document.createElement('span');num.className='blud-num';num.textContent=String(x.i+1).padStart(2,'0');
+     const txt=document.createElement('span');txt.className='blud-item-text';txt.textContent=x.item;
+     const pending=document.createElement('span');pending.className='blud-pending';pending.textContent='LINK BELUM DIPASANG';
+     row.append(num,txt,pending);items.appendChild(row);
+    });
+    a.appendChild(items);wrap.appendChild(a);
+   });
+   if(groupHas){details.appendChild(wrap);list.appendChild(details);}
+  });
+ }
+ const panel=document.getElementById('blud2026Panel');
+ function open(){panel.classList.add('is-open');document.body.style.overflow='hidden';render('');document.getElementById('bludSearch').value='';}
+ function close(){panel.classList.remove('is-open');document.body.style.overflow='';}
+ document.getElementById('openBlud2026').addEventListener('click',e=>{e.preventDefault();open();});
+ document.getElementById('closeBlud2026').addEventListener('click',close);
+ panel.addEventListener('click',e=>{if(e.target===panel)close();});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('is-open'))close();});
+ document.getElementById('bludSearch').addEventListener('input',e=>render(e.target.value));
+})();
+</script>
+
 </body>
 </html>
